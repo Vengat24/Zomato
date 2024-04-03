@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="/Assignments/TEMPLATE/Zomato/Zomato_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Zomato</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           font-family: Okra, Helvetica, sans-serif;
+        }
+        .head{
+            background-image: url('/Assignments/TEMPLATE/Zomato/zomatoback.png');
+            background-position: center;
+            height: 430px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .header{
+            display: flex;
+            justify-content:center;
+            padding-top: 20px;
+            gap: 30%;
+        }
+        .head_right{
+            display: flex;
+            gap: 50px;
+            justify-content: space-evenly ;
+        }
+        .head_right label{
+            font-size: 20px;
+            color: azure;
+        }
+        .head_left{
+            display: flex;
+            justify-content: center;
+        }
+        .head_left label{
+            font-size: 15px;
+            color: azure;
+        }
+
+        .middle{
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        .middle .image{
+            width: 285px;
+            height: 60px;
+            background-image: url(/Assignments/TEMPLATE/Zomato/zomato_name.avif);   
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .middle .title label{
+            color: azure;
+            font-size: 43px;
+        }
+        .middle .input{
+            background-color: aliceblue;
+            width: 50%;
+            height: 55px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .middle .location  select{
+            height: 55px;
+            width: 210px;
+            color: gray;
+            font-size: 15px;
+            padding-left: 5px;
+            border: none;
+            outline: none;
+        }
+        .middle .map{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px 0 0 10px ;
+            color: tomato;
+            width: 100px;
+            padding-left: 10px;
+            height: 55px;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle .search input{
+            width: 480px;
+            height: 55px;
+            border-radius: 0 10px 10px 0;
+            padding-left: 25px;
+            font-size: 15px;
+            color: gray;
+            border: none;
+            outline: none;
+        }
+        .middle .search_icon{
+            color: gray;
+            display: flex;
+            padding-left: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            background-color: rgb(255, 255, 255);
+        }
+        .split{
+            background-color: rgb(255, 255, 255);
+            width: 2px;
+            font-size: 20px;
+            color: gray;
+            display: flex;
+            padding-left: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle .search i{
+            margin-top: 10px;
+        }
+
+
+
+        /* Second Content  */
+        .second{
+            width: 100%;
+            height: 280px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .second>div{
+            width: 370px;
+            height: 240px;
+            border-radius: 20px;
+        }
+        .blog1 .image{
+            background-image: url(/Assignments/TEMPLATE/Zomato/order.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 370px;
+            height: 180px;
+            border-radius: 20px 20px 0 0 ;
+        }
+        .blog2 .image{
+            background-image: url(/Assignments/TEMPLATE/Zomato/dining.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 370px;
+            height: 180px;
+            border-radius: 20px 20px 0 0 ;
+        }
+        .blog3 .image{
+            background-image: url(/Assignments/TEMPLATE/Zomato/nightlife.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 370px;
+            height: 180px;
+            border-radius: 20px 20px 0 0 ;
+        }
+        .second>div .content{
+            width: 370px;
+            height: 70px;
+            border-radius: 0 0 20px 20px;
+            border: 1px solid rgb(212, 212, 212);
+        }
+        .content>div{
+            display: flex;
+            justify-content: start;
+            margin-left: 20px;
+            padding: 5px;
+            color: rgb(121, 121, 121);
+            font-size: 17px;
+        }
+        .con1 label{
+            font-size: 20px;
+            color: rgb(30, 30, 30);
+        }
+        
+
+        /* Collection page */
+        .collection{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .collection .top{
+            margin-top: 70px;
+            width: 85%;
+            height: 100px;
+            
+        }
+        .collection .bottom{
+            width: 75%;
+            height: 350px;
+            display: flex;
+            gap: 10px;
+            
+        }
+        .collection .bottom>div{
+            
+            width: 24%;
+            height: 320px;
+            border-radius: 10px;
+            display: flex;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .collection .bottom .image1{
+            background-image: url(/Assignments/TEMPLATE/Zomato/whats_new.png);
+        }
+        .collection .bottom .image2{
+            background-image: url(/Assignments/TEMPLATE/Zomato/best_in.png);
+        }
+        .collection .bottom .image3{
+            background-image: url(/Assignments/TEMPLATE/Zomato/sea_view.png);
+        }
+        .collection .bottom .image4{
+            background-image: url(/Assignments/TEMPLATE/Zomato/breakfast.png);
+        }
+        .collection .bottom>div>div{
+            color: aliceblue;
+            padding-left: 10px;
+            width: 100%;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+        }
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 18%;
+            padding-bottom: 10px;
+        }
+        .top_right{
+            color: tomato;
+            font-size: large;
+        }
+        .top_left{
+            font-size: larger;
+            color: rgb(92, 92, 92);
+        }
+
+
+
+        /* Localities */
+        .localities{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        .localities .title{
+            font-weight:normal;
+            padding-left: 13%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: rgb(75, 75, 75);
+            font-size: 42px;
+        }
+        .localities .boxes{
+            width: 100%;
+            margin-top: 30px;
+            height: 280px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxes>div{
+            border: 0.5px solid rgb(230, 230, 230);
+            box-shadow: 1px 2px 2px rgb(231, 231, 231);
+            border-radius: 8px;
+            width: 350px;
+            height: 80px;
+        }
+        .box1{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .about_locality{
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        .about_locality #h4{
+            color: rgb(54, 54, 54);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .about_locality #h5{
+            color: rgb(153, 153, 153);
+            font-size: 16px;
+        }
+        .box9 {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .box9 .about_locality {
+            display: flex;
+            flex-direction: row;
+             gap: 20px;
+        }
+
+
+        /* Explore  */
+        .explore{
+            width: 100%;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .explore .title{
+            width: 75%;
+            text-align:left;
+            margin: 20px;
+            color: rgb(20, 20, 20);
+            font-size: 35px;
+        }
+        .explore .content{
+            width: 75%;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .explore .content .box1{
+            width: 95%;
+            border-radius: 10px;
+            border: 1px solid rgb(216, 216, 216);
+            margin-left: 0;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .explore .content .box1 label{
+            color: rgb(78, 78, 78);
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .footer{
+            background-color: rgb(249, 249, 249);
+            width: 100%;
+            height: 500px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer .top{
+            margin-top: 60px;
+            width: 72%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .location{
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer .location>div{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: rgb(53, 52, 52);
+            width: 100px;
+            border: 1px solid rgb(115, 115, 115);
+        }
+        .footer .middle{
+            width: 72%;
+            height: 300px;
+            margin-top: 0px;
+            font-size: 16px;
+            color: gray;
+
+        }
+        .footer .heading{
+            color: black;
+        }
+        .footer .about{
+            width: 350px;
+            height: 30px;
+        }
+
+        .footer .zoma{
+            width: 350px;
+        }
+        .footer .rest{
+            width: 350px;
+        }
+        .footer .more{
+            width: 350px;
+        }
+        .footer .icon{
+            width: 220px;
+        }
+        .footer .icon i{
+            color: rgb(255, 255, 255);
+            padding: 6px;
+            background-color: black;
+            border-radius: 50%;
+            
+        }
+
+        .footer .bottom{
+            width: 72%;
+            margin-top: 20px;
+            height: 100px;
+            border-top: 1px solid rgb(177, 177, 177);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: gray;
+        }
+
+        /* App */
+        .app{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 246, 246);
+        }
+        .app_right{
+            width: 480px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .app_right>div{
+            display: flex;
+        }
+        .app_right .class1{
+            font-size: 40px;
+        }
+
+        .app_right .class2{
+            font-size: 18px;
+            color: gray;
+        }
+      
+       
+        .app_right .class3 input{
+            color: bisque;
+            font-size: 40px;
+            accent-color: red ;
+            width: 20px; 
+        }
+        .app_right .class4 input{
+            width: 270px;
+            height: 40px;
+            border: none;
+            border: 1px solid rgb(220, 220, 220);
+            padding-left: 10px;
+            border-radius: 10px;
+
+        }
+        .app_right .class4 button{
+            width: 150px;
+            background-color: rgb(250, 43, 43);
+            color: aliceblue;
+            font-size: 15px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .app_right .class5{
+            color: gray;
+        }
+        .app_right .class6{
+            display: flex;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            <div class="head_left">
+                <label for="">
+                <i class="fa-solid fa-mobile"></i>
+                Get the App
+                </label>
+            </div>
+            <div class="head_right">
+                <div><label for="">
+                    Investor Reltions
+                </label></div>
+                <div>
+                    <label for="">Add restaurant</label>
+                </div>
+                <div>
+                    <label for="">Log in</label>
+                </div>
+                <div>
+                    <label for="">Sign up</label>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="image">
+            </div>
+            <div class="title">
+                <label for="">Discover the best food & drinks in Chennai</label>
+            </div>
+           
+            <div class="input">
+                <div class="map">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location">
+                    <select name="" id="">
+                        <option value="Velachery, Chennai"><label for=""><i class="fa-solid fa-location-dot"></i>Velachery, Chennai</label></option>
+                    </select>
+                </div>
+                <div class="split">
+                    <i class="fa-solid fa-grip-lines-vertical"></i>
+                </div>
+                <div class="search_icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="search">
+                    
+                    <input type="search" placeholder="Search for  restaurant, cuisine or a dish">
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="second">
+        <div class="blog1"> 
+            <div class="image"></div>
+            <div class="content">
+                <div class="con1"><label for="">Order Online</label></div>
+                <div class="con2"><label for="">stay home and order to your doorstep</label></div>
+            </div>
+        </div>
+        <div class="blog2"> 
+            <div class="image"></div>
+            <div class="content">
+                <div class="con1"><label for="">Dining</label></div>
+                <div class="con2"><label for="">View the city's favourite dining venues</label></div>
+            </div>
+        </div>
+        <div class="blog3"> 
+            <div class="image"></div>
+            <div class="content">
+                <div class="con1"><label for="">Nightlife and Clubs</label></div>
+                <div class="con2"><label for="">Explore the city's top nightlife outlets</label></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="collection">
+        <div class="top">
+            <div class="top_left">
+                <div class="left_content">
+                    <h1>Collections</h1>
+                    <label for="">Explore curated lists of top restaurants, cafe, pubs, and bars in Chennai, based on trends</label>
+                </div>
+            </div>
+            <div class="top_right">
+                <label for="">All collection in Chennai <i class="fa-solid fa-caret-right"></i></label>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="image1">
+                <div class="image_content">
+                    <h2>So what's New?</h2>
+                    <label for="">8 Places <i class="fa-solid fa-caret-right"></i></label>
+                </div>
+            </div>
+            <div class="image2">
+                <div class="image_content">
+                    <h2>Best in Chennai</h2>
+                    <label for="">20 Places <i class="fa-solid fa-caret-right"></i></label>
+                </div>
+            </div>
+            <div class="image3">
+                <div class="image_content">
+                    <h2>Sea View Dining</h2>
+                    <label for="">7 Places <i class="fa-solid fa-caret-right"></i></label>
+                </div>
+            </div>
+            <div class="image4">
+                <div class="image_content">
+                    <h2>Up For Breakfast?</h2>
+                    <label for="">17 Places <i class="fa-solid fa-caret-right"></i></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="localities">
+        <div class="title">
+            <label>Popular localities in and around Chennai</label>
+        </div>
+        <div class="boxes">
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">T. Nagar</label>
+                    <label id="h5">357 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Nungambakkam</label>
+                    <label id="h5">305 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Velachery</label>
+                    <label id="h5">469 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Adyar</label>
+                    <label id="h5">209 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Anna Nagar East</label>
+                    <label id="h5">354 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Thuraipakkam</label>
+                    <label id="h5">255 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Mylapore</label>
+                    <label id="h5">170 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="about_locality">
+                    <label id="h4">Alwarpet</label>
+                    <label id="h5">141 places</label>
+                </div>
+                <div class="locality_icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="box9">
+                <div class="about_locality">
+                    <label id="h4">see more</label>
+                    <label id="h5"><i class="fa-solid fa-angle-down"></i></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="app">
+        <div class="phone">
+            <img src="/Assignments/TEMPLATE/Zomato/zomato_phone.png" alt="" width="250px">
+        </div>
+        <div class="app_right">
+            <div class="class1"> Get the Zomato app</div>
+            <div class="class2">We will send you a link, open it on your phone to download the app</div>
+            <div class="class3">
+                <div class="email_id">
+                    <input type="radio" checked><label for="">Email</label>
+                    
+                </div>
+                
+                <div class="phone_id">
+                    <input type="radio"><label for="">Phone</label>
+                </div>
+            </div>
+            <div class="class4">
+                <input type="text" placeholder="Email">
+                <button>Share App Link</button>
+            </div>
+            <div class="class5">Download app from</div>
+            <div class="class6">
+                <img src="/Assignments/TEMPLATE/Zomato/google_play.webp" alt="" width="150px">
+                <img src="/Assignments/TEMPLATE/Zomato/app_store.webp" alt="" width="150px">
+            </div>
+        </div>
+    </div>
+
+    <div class="explore">
+        <div class="title">
+            <label for="">Explore options near me</label>
+        </div>
+        <div class="content">
+            <div class="box1">
+                <label for="">Popular cuisines near me</label>
+                <label for=""><i class="fa-solid fa-angle-down"></i></label>
+            </div>
+            <div class="box1">
+                <label for="">Popular restaurant types near me</label>
+                <label for=""><i class="fa-solid fa-angle-down"></i></label>
+            </div>
+            <div class="box1">
+                <label for="">Top Restaurant Chains</label>
+                <label for=""><i class="fa-solid fa-angle-down"></i></label>
+            </div>
+            <div class="box1">
+                <label for="">Cities We Deliver To</label>
+                <label for=""><i class="fa-solid fa-angle-down"></i></label>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="top">
+            <div class="logo"><img src="/Assignments/TEMPLATE/Zomato/zomato_black.webp" alt="" width="140px"></div>
+            <div class="location">
+                <div class="india">
+                    <div class="i"><img src="/Assignments/TEMPLATE/Zomato/india.webp" alt="" width="25px"></div>
+                    <div class="loc">India</div>
+                    <div class="side"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <div class="English">
+                    <div class="i"><i class="fa-solid fa-globe"></i></div>
+                    <div class="loc">English</div>
+                    <div class="side"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+                <table>
+                    <thead>
+                        <tr class="heading">
+                            <td class="about">ABOUT ZOMATO</td>
+                            <td class="zoma">ZOMAVERSE</td>
+                            <td class="rest">FOR RESTAURANTS</td>
+                            <td class="more">LEARN MORE</td>
+                            <td class="icon">SOCIAL LINKS</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="about">Who we Are</td>
+                            <td class="zoma">Zomato</td>
+                            <td  class="rest">Partner With Us</td>
+                            <td class="more">Privacy</td>
+                            <td class="icon" rowspan="2"><i class="fa-brands fa-linkedin"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-youtube"></i> <i class="fa-brands fa-facebook"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="about">Blog</td>
+                            <td class="zoma">Blinkit</td>
+                            <td  class="rest">Apps For You</td>
+                            <td class="more">Security</td>
+                        </tr>
+                        <tr>
+                            <td class="about">Work With Us</td>
+                            <td class="zoma">Feeding India</td>
+                            <td class="rest"></td>
+                            <td class="more">Terms</td>
+                            <td class="icon" rowspan="2"><img src="/Assignments/TEMPLATE/Zomato/app_store.webp" alt="" width="150px"></td>
+                        </tr>
+                        <tr>
+                            <td class="about">Investor Relations</td>
+                            <td class="zoma">Hyperpure</td>
+                            <td class="rest"></td>
+                            <td class="more">Sitemap</td>
+                        </tr>
+                        <tr>
+                            <td class="about">Report Fraud</td>
+                            <td class="zoma">Zomaland</td>
+                            <td class="rest"></td>
+                            <td class="more"></td>
+                            <td class="icon" rowspan="2"><img src="/Assignments/TEMPLATE/Zomato/google_play.webp" alt="" width="150px"></td>
+                        </tr>
+                        <tr>
+                            <td class="about">Press Kit</td>
+                        </tr>
+                        <tr>
+                            <td class="about">Contact Us</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div class="line">
+            
+        </div>
+        <div class="bottom">
+            <label id="bottom" for="">
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.
+            </label>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
